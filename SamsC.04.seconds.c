@@ -9,14 +9,14 @@
 
 /* Define constants */
 
-#define SECS_PER_MIN 60                                 // from original script
-#define MIN_PER_HOUR 60
-#define HOURS_PER_DAY 24
-#define DAYS_PER_YEAR 365
-#define SECS_PER_YEAR 31536000
-#define SECS_PER_HOUR 3600                              // from original script
-#define SECS_PER_DAY 86400
-#define LIMIT 2147438647
+#define SECS_PER_MIN    60                                 // from original script
+#define MIN_PER_HOUR    60
+#define HOURS_PER_DAY   24
+#define DAYS_PER_YEAR   365
+#define SECS_PER_YEAR   31536000
+#define SECS_PER_HOUR   3600                              // from original script
+#define SECS_PER_DAY    86400
+#define LIMIT           4294967295
 
 unsigned int seconds, minutes, hours, days, years, secs_remain, mins_remain, hours_remain, days_remain;     // modified from original script
 
@@ -26,7 +26,7 @@ int main(void)                                                                  
     /* Input the number of seconds. */
 
     printf( "Enter the number of seconds ( > 0, < %u ): \n", LIMIT );                  // modified from original script
-    scanf( "%d", &seconds );                                                                            // from original script
+    scanf( "%u", &seconds );                                                                            // from original script
 
     years = seconds /SECS_PER_YEAR;
     days = seconds / SECS_PER_DAY;
